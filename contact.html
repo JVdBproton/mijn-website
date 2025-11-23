@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Jeffrey">
+    <link rel="stylesheet" href="./CSS/reset.css" type="text/css" />
+    <link rel="stylesheet" href="./CSS/stylesheet.css" type="text/css" />
+    <title>Contact</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 500px;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #555;
+        }
+        input[type="text"], input[type="email"], textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        textarea {
+            resize: vertical;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007BFF;
+            border: none;
+            border-radius: 4px;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3
+        }
+        .error {
+            color: red;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <ul class="nav-top">
+        <li><a class="nav-button" href="index.html">Home</a></li>
+        <li><a class="nav-button" href="portfolio.html">Projecten</a></li>
+        <li><a class="nav-button" href="contact.html">Contact</a></li>
+    </ul>
+    <br>
+    <h1>Contact</h1>
+    <br>
+    <div class="container">
+        <h2>Neem contact op</h2>
+        <form action="/verzenden" method="post">
+            <label for="naam">Volledige naam:</label>
+            <input type="text" id="naam" name="naam" required>
+
+            <label for="email">E-mailadres:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="onderwerp">Onderwerp:</label>
+            <input type="text" id="onderwerp" name="onderwerp" required>
+
+            <label for="bericht">Bericht:</label>
+            <textarea id="bericht" name="bericht" rows="4" required></textarea>
+
+            <button type="submit">Verstuur</button>
+        </form>
+    </div>
+</body>
+</html>
